@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.EtudiantController">
+
+    <top>
+        <Label text="Gestion des Absences des Étudiants" style="-fx-font-size: 20px; -fx-padding: 10px;" BorderPane.alignment="CENTER"/>
+    </top>
+
+    <center>
+        <VBox spacing="10">
+            <TableView fx:id="tableEtudiants" prefHeight="200">
+                <columns>
+                    <TableColumn fx:id="colId" text="ID" prefWidth="50"/>
+                    <TableColumn fx:id="colNom" text="Nom" prefWidth="100"/>
+                    <TableColumn fx:id="colPrenom" text="Prénom" prefWidth="100"/>
+                    <TableColumn fx:id="colEmail" text="Email" prefWidth="200"/>
+                </columns>
+            </TableView>
+
+            <HBox spacing="10">
+                <TextField fx:id="txtNom" promptText="Nom"/>
+                <TextField fx:id="txtPrenom" promptText="Prénom"/>
+                <TextField fx:id="txtEmail" promptText="Email"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Button text="Ajouter" fx:id="btnAjouter"/>
+                <Button text="Modifier" fx:id="btnModifier"/>
+                <Button text="Supprimer" fx:id="btnSupprimer"/>
+            </HBox>
+        </VBox>
+    </center>
+
+</BorderPane>
